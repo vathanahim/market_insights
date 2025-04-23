@@ -28,6 +28,8 @@ streamlit run app.py
 
 2. Open your browser and navigate to `http://localhost:8501`
 
+Or you can go to https://vathana-housing-economic-insights.streamlit.app/ to view the deploy app
+
 3. Use the date range selectors to view data for specific periods
 
 ## Project Structure
