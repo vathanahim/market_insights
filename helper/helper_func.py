@@ -23,4 +23,7 @@ def get_data(url, api_param):
 def convert_to_df(data):
     df = pd.json_normalize(data, 'observations')
     df = df[['date', 'value']]
+    df['value'] = pd.to_numeric(df['value'], errors='coerce')
+    df = df.dropna(subset=['value'])
+    df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
     return df
