@@ -124,7 +124,7 @@ def create_chart(df, start_date, end_date, title:str, subtitle:str, yaxis_title:
         max_date = df['date'].max().date()
         if min_date < max_date:
             date_range = st.slider(
-                "Select Date Range", 
+                f"Select Date Range {title}", 
                 min_value=min_date, 
                 max_value=max_date, 
                 value=(min_date, max_date)
@@ -180,7 +180,7 @@ def create_chart_monthly(df, start_date, end_date, title:str, subtitle:str, yaxi
         max_date = df['date'].max().date()
         if min_date < max_date:
             date_range = st.slider(
-                "Select Date Range", 
+                f"Select Date Range {title}", 
                 min_value=min_date, 
                 max_value=max_date, 
                 value=(min_date, max_date)
