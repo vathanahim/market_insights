@@ -31,8 +31,11 @@ st.title('Market Insights Dashboard')
 
 load_dotenv()
 
-api_key = os.getenv('API_KEY')
-base_url = os.getenv('BASE_URL') 
+def get_config(config_key):
+    return os.getenv(config_key) or os.getenv(config_key)
+
+api_key = get_config('API_KEY')
+base_url = get_config('BASE_URL') 
 cur_date = datetime.datetime.now().strftime('%Y-%m-%d')
 
 
